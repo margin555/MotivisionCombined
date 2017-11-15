@@ -12,7 +12,7 @@ import com.example.appsteam.motivision.R;
 import com.robinhood.spark.SparkAdapter;
 import com.robinhood.spark.SparkView;
 
-public class MainActivity extends AppCompatActivity {
+public class Progress extends AppCompatActivity {
 
     private TextView txtProgress,txtProgress1;
     private ProgressBar progressBar;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.progress);
 
         txtProgress = (TextView) findViewById(R.id.txtProgress);
         txtProgress1 = (TextView) findViewById(R.id.txtProgress1);

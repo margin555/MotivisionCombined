@@ -1,67 +1,76 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
-    tools:context="com.example.appsteam.motivision.circular_Progress.MainActivity">
+    android:orientation="vertical"
+    android:background="@drawable/regbg"
+    android:padding="40dp">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="30dp"
+        android:text="M O T I V I S I O N"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/username"
+        android:hint="Username"
+        android:layout_marginTop="170dp"
+        android:textColor="#FFF"
+        android:paddingLeft="0dp"
+        android:drawablePadding="5dp"
+        android:textColorHint="#999"/>
 
-    <RelativeLayout
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password"
+
+        android:hint="Password"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFF"
+        android:paddingLeft="0dp"
+        android:drawablePadding="5dp"
+        android:textColorHint="#999"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="LOGIN"
+        android:background="@drawable/mybutton"
+        android:textColor="@color/white"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_centerInParent="true"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Not yet a member?"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:textColor="#FFF"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Register Now"
+        android:id="@+id/textView4"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/login_scrn_green"
+        />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="280dp"
-            android:layout_height="250dp"
-            android:layout_centerInParent="true"
-            android:indeterminate="false"
-            android:max="100"
-            android:progress="0"
-            android:progressDrawable="@drawable/custom_progressbar_drawable"
-            android:secondaryProgress="0" />
-
-        <TextView
-            android:id="@+id/txtProgress1"
-            android:layout_marginTop="280dp"
-            android:layout_marginLeft="150dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:textColor="@color/green"
-            android:singleLine="false"
-            android:layout_centerInParent="false"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-        <TextView
-            android:id="@+id/txtProgress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/green"
-            android:textSize="30dp"
-            android:singleLine="false"
-            android:layout_alignBottom="@+id/progressBar"
-            android:layout_centerInParent="true"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_marginTop="380dp"
-            android:layout_height="140dp"
-            android:orientation="vertical">
-
-            <com.robinhood.spark.SparkView
-                android:id="@+id/sparkview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:spark_lineColor="@color/green"
-                />
-        </LinearLayout>
-    </RelativeLayout>
-
-
-
-</RelativeLayout>
+</LinearLayout>
