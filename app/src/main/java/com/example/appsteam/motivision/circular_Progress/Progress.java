@@ -65,9 +65,12 @@ public class Progress extends AppCompatActivity {
     public class MyAdapter extends SparkAdapter {
         private float[] yData;
 
+
         public MyAdapter(float[] yData) {
             this.yData = yData;
         }
+
+
 
         @Override
         public int getCount() {

@@ -29,6 +29,14 @@
         <item name="colorControlNormal">@color/black</item>
     </style>
 
+    <style name="ProgressActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/regbg</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorControlActivated">@color/green</item>
+        <item name="colorControlNormal">@color/black</item>
+    </style>
+
     <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
 
     </style>

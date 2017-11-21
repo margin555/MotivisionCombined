@@ -7,69 +7,77 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:textSize="30dp"
         android:text="M O T I V I S I O N"
-        android:textColor="@color/white"
         android:textAlignment="center"
-        android:layout_gravity="center_horizontal"/>
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
         android:id="@+id/username"
-        android:hint="Username"
-        android:layout_marginTop="170dp"
-        android:textColor="#FFF"
-        android:paddingLeft="0dp"
-        android:drawablePadding="5dp"
-        android:textColorHint="#999"/>
-
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/password"
-
-        android:hint="Password"
-        android:layout_marginTop="10dp"
-        android:textColor="#FFF"
-        android:paddingLeft="0dp"
+        android:layout_marginTop="140dp"
         android:drawablePadding="5dp"
-        android:textColorHint="#999"/>
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="0dp"
+        android:textColor="#FFF"
+        android:textColorHint="#999" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="0dp"
+        android:textColor="#FFF"
+        android:textColorHint="#999" />
 
     <Button
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="LOGIN"
-        android:background="@drawable/mybutton"
-        android:textColor="@color/white"
-        android:id="@+id/button"
         android:layout_gravity="center_horizontal"
-        />
+        android:layout_marginTop="35dp"
+        android:background="@drawable/mybutton"
+        android:text="LOGIN"
+        android:textColor="@color/white" />
 
     <TextView
+        android:id="@+id/forgotpswd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Not yet a member?"
-        android:id="@+id/textView3"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:textColor="#FFF"
-        />
+        android:layout_marginTop="35dp"
+        android:text="Forgot Password ?"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/login_scrn_green" />
+
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Register Now"
-        android:id="@+id/textView4"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/login_scrn_green"
-        />
+        android:layout_marginTop="30dp"
+        android:text="Not yet a member?"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFF" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Register Now"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/login_scrn_green" />
 
 </LinearLayout>
