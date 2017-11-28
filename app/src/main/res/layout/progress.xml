@@ -30,13 +30,12 @@
         <TextView
             android:id="@+id/txtProgress1"
             android:layout_marginTop="290dp"
-            android:layout_marginLeft="150dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dp"
             android:textColor="@color/green"
             android:singleLine="false"
-            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="true"
             android:textAppearance="?android:attr/textAppearanceSmall" />
         <TextView
             android:id="@+id/txtProgress"

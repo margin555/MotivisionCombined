@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Motivision</string>
+    <string name="app_name2">M O T I V I S I O N</string>
+
+  <!--  Toast messages-->
+    <string name="reg_success">Registration Successfull</string>
+    <string name="Enter_All">Enter All Fields</string>
+    <string name="passwd_length">Password must be atleast 8 characters</string>
+    <string name="usr_exists">Username already Exists</string>
+    <string name="Invalid_usrname_passwd">Invalid Username Or Password</string>
+
+
+
+
 
 </resources>
