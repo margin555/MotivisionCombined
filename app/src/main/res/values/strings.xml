@@ -8,7 +8,9 @@
     <string name="passwd_length">Password must be atleast 8 characters</string>
     <string name="usr_exists">Username already Exists</string>
     <string name="Invalid_usrname_passwd">Invalid Username Or Password</string>
-
+    <string name="Enter_a_valid_Username">Invalid Username </string>
+    <string name="wrong_answer">Wrong Answer </string>
+    <string name="Passwords_not_matching">Password does not match</string>
 
 
 
