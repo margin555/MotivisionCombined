@@ -90,5 +90,10 @@ public class MotivisionDbManager extends SQLiteOpenHelper {
         Cursor cursor = sqLiteDatabase.rawQuery("select * from " + MOTIVISION_TABLE_REGISTRATION + " where " + MOTIVISION_REGISTRATION_COLUMN_USERNAME + " = " + "'" + username + "'", null);
         return cursor;
     }
+    public Cursor getSecurityquestion(String username) {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select "+MOTIVISION_REGISTRATION_COLUMN_SECURITY_QUESTION+" from " + MOTIVISION_TABLE_REGISTRATION + " where " + MOTIVISION_REGISTRATION_COLUMN_USERNAME + " = " + "'" + username + "'", null);
+        return cursor;
+    }
 
 }

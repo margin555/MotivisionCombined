@@ -8,17 +8,14 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.example.appsteam.motivision.R;
 import com.example.appsteam.motivision.circular_Progress.Progress;
 import com.example.appsteam.motivision.common.MotivisionDbManager;
 import com.example.appsteam.motivision.common.Utility;
 
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     private EditText username, password,f_Answer;
@@ -28,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private String musername, mpassword;
     private MotivisionDbManager mdbmanager;
     public static final String MOTIVISION_PREFS_NAME = "MyPrefs";
+    Cursor cursor;
 
 
     @Override
@@ -48,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 mpassword = password.getText().toString();
                 if (musername.equals("") || mpassword.equals("")) {
                     utility.setToast(getApplicationContext(), getResources().getString(R.string.Enter_All));
-                } else if (mpassword.length() > 8) {
+                } else if (mpassword.length() > 7) {
                     Cursor cursor = mdbmanager.getDataUsernamePassword(musername, mpassword);
                     if (cursor.getCount() == 0) {
                         utility.setToast(getApplicationContext(), getResources().getString(R.string.Invalid_usrname_passwd));
@@ -83,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 musername = username.getText().toString();
-                final Cursor cursor = mdbmanager.getRegistrationFullData(musername);
+                 cursor = mdbmanager.getSecurityquestion(musername);
                 if (musername.equals("")) {
                     utility.setToast(getApplicationContext(), getResources().getString(R.string.Enter_All));
 
@@ -94,8 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
                     View mView = getLayoutInflater().inflate(R.layout.activity_forget_password, null);
                     security_frgt = (TextView)mView.findViewById(R.id.security_frgt);
-                    String mquestion;
-                    mquestion = cursor.getString(cursor.getColumnIndex(MotivisionDbManager.MOTIVISION_REGISTRATION_COLUMN_SECURITY_QUESTION));
+                    String mquestion = cursor.getString(cursor.getColumnIndex(MotivisionDbManager.MOTIVISION_REGISTRATION_COLUMN_SECURITY_QUESTION));
                     security_frgt.setText(mquestion);
 
                     f_Answer = (EditText) mView.findViewById(R.id.Answer);

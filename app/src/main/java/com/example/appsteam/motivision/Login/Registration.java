@@ -76,7 +76,7 @@ public class Registration extends AppCompatActivity {
 
                     if (mUsername.isEmpty() || mPassword.isEmpty() || mQuestion.isEmpty() || mConfirmPassword.isEmpty() || mAnswer.isEmpty()) {
                         utility.setToast(getApplicationContext(), getResources().getString(R.string.Enter_All));
-                    } else if (mPassword.length() < 8) {
+                    } else if (mPassword.length() <8) {
                         utility.setToast(getApplicationContext(), getResources().getString(R.string.passwd_length));
                     } else if ((mPassword).equals(mConfirmPassword)) {
                         motivisionDbManager.insertRegistrationDetails(mUsername, mPassword, mQuestion, mAnswer, "");
@@ -96,7 +96,7 @@ public class Registration extends AppCompatActivity {
                         } else if (mPassword.length() < 8) {
                             utility.setToast(getApplicationContext(), getResources().getString(R.string.passwd_length));
                         } else if (mPassword.equals(mConfirmPassword)) {
-                            motivisionDbManager.insertRegistrationDetails(mUsername, mPassword, mConfirmPassword, mQuestion, mAnswer);
+                            motivisionDbManager.insertRegistrationDetails(mUsername, mPassword,mQuestion, mAnswer,"");
                             utility.setToast(getApplicationContext(), getResources().getString(R.string.reg_success));
                             logincall();
                         } else {
