@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <tabs>
+        <tab
+            android:id="@+id/tab_home"
+            android:icon="@drawable/ungroup"
+            android:title="Home" />
+        <tab
+            android:id="@+id/tab_group"
+            android:icon="@drawable/ungroup"
+            android:title="Group" />
+        <tab
+            android:id="@+id/tab_add"
+            android:icon="@drawable/add"
+            android:title="Add" />
+        <tab
+            android:id="@+id/tab_path"
+            android:icon="@drawable/unpath"
+            android:title="Path" />
+        <tab
+            android:id="@+id/tab_user"
+            android:icon="@drawable/unuser"
+            android:title="User" />
+    </tabs>
+</selector>

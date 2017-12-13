@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fragment1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorblack"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Home.Home_Activity">
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:textAlignment="center"
+       android:text="M O T I V I S I O N"
+       android:textSize="18dp"
+       android:id="@+id/motivision_label"
+       android:textColor="@color/white"/>
+
+ <com.example.appsteam.motivision.XML_class.CenteringTabLayout
+     android:id="@+id/tab"
+     android:layout_below="@id/motivision_label"
+     android:layout_marginTop="20dp"
+     android:layout_width="match_parent"
+     android:layout_height="30dp"
+     android:layout_alignParentStart="true"
+     android:background="@color/colorblack"
+     app:tabBackground="@drawable/custom_shape"
+     app:tabGravity="center"
+     app:tabIndicatorHeight="0dp"
+     app:tabMode="scrollable"
+
+     android:layout_alignParentLeft="true" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tab"
+        android:layout_marginTop="34dp"
+        android:layout_alignParentLeft="true" />
+
+    <ImageButton
+        android:id="@+id/imageButtonred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/viewpager"
+        android:layout_marginStart="84dp"
+        android:background="@color/colorblack"
+        android:src="@drawable/red"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="84dp" />
+
+    <ImageButton
+        android:id="@+id/imageButtongreen"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewpager"
+        android:layout_marginStart="52dp"
+        android:layout_toEndOf="@+id/imageButtonred"
+        android:background="@color/colorblack"
+        android:src="@drawable/green"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="52dp"
+        android:layout_toRightOf="@+id/imageButtonred" />
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottombar1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorblack"
+        app:bb_inActiveTabAlpha="0.6"
+        app:bb_activeTabAlpha="1"
+        app:bb_activeTabColor="@color/colowhite"
+        app:bb_inActiveTabColor="@color/colorgray"
+        app:bb_tabXmlResource="@xml/button_bar"/>
+
+    </RelativeLayout>

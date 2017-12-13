@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<!--<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/my_tab_icon"
+        title="Home" />
+    <tab
+        id="@+id/tab_group"
+        icon="@drawable/my_tab_icon"
+        title="Group" />
+    <tab
+        id="@+id/tab_add"
+        icon="@drawable/my_tab_icon"
+        title="Add" />
+    <tab
+        id="@+id/tab_path"
+        icon="@drawable/my_tab_icon"
+        title="Path" />
+    <tab
+        id="@+id/tab_user"
+        icon="@drawable/my_tab_icon"
+        title="User" />
+</tabs>-->
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/home3"
+        />
+    <tab
+        id="@+id/tab_group"
+        icon="@drawable/group3"
+        />
+    <tab
+        id="@+id/tab_add"
+        icon="@drawable/add4"
+        />
+    <tab
+        id="@+id/tab_path"
+        icon="@drawable/path3"
+        />
+    <tab
+        id="@+id/tab_user"
+        icon="@drawable/user3"
+        />
+</tabs>
