@@ -1,77 +1,90 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/black"
+    android:orientation="vertical"
     tools:context="com.example.appsteam.motivision.circular_Progress.Progress">
 
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_centerInParent="true"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp">
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="280dp"
-            android:layout_height="250dp"
-            android:layout_marginTop="60dp"
+            android:layout_height="240dp"
             android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
             android:indeterminate="false"
             android:max="100"
             android:progress="0"
             android:progressDrawable="@drawable/custom_progressbar_drawable"
-            android:secondaryProgress="0"
-            />
+            android:secondaryProgress="0" />
 
         <TextView
             android:id="@+id/txtProgress1"
-            android:layout_marginTop="290dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:textColor="@color/green"
-            android:singleLine="false"
             android:layout_centerHorizontal="true"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:layout_marginTop="290dp"
+            android:singleLine="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/green"
+            android:textSize="12dp" />
+
         <TextView
             android:id="@+id/txtProgress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/green"
-            android:textSize="30dp"
-            android:singleLine="false"
             android:layout_alignBottom="@+id/progressBar"
             android:layout_centerInParent="true"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:singleLine="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/green"
+            android:textSize="30dp" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="400dp"
-            android:layout_height="140dp"
+            android:gravity="bottom"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="YEARLY PROGRESS"
-                android:textColor="@color/white"
                 android:gravity="center"
-                />
+                android:text="YEARLY PROGRESS"
+                android:textColor="@color/white" />
 
             <com.robinhood.spark.SparkView
-                android:layout_marginTop="30dp"
                 android:id="@+id/sparkview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:spark_lineColor="@color/green"
+                android:layout_height="85dp"
+                android:layout_marginTop="3dp"
                 android:theme="@style/spark_SparkView"
-                />
+                app:spark_lineColor="@color/green" />
         </LinearLayout>
+
     </RelativeLayout>
 
 
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottombar4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorblack"
+        android:layout_alignParentBottom="true"
+        app:bb_activeTabAlpha="1"
+        app:bb_activeTabColor="@color/colowhite"
+        app:bb_inActiveTabAlpha="0.6"
+        app:bb_inActiveTabColor="@color/colorgray"
+        app:bb_tabXmlResource="@xml/button_bar"
+       />
 
 </LinearLayout>

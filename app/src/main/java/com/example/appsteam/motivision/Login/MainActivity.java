@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.appsteam.motivision.Home.Home_Activity;
 import com.example.appsteam.motivision.R;
 import com.example.appsteam.motivision.circular_Progress.Progress;
 import com.example.appsteam.motivision.common.MotivisionDbManager;
@@ -57,8 +59,10 @@ public class MainActivity extends AppCompatActivity {
                         String mGetDb_Username = cursor.getString(cursor.getColumnIndex(mdbmanager.MOTIVISION_REGISTRATION_COLUMN_USERNAME));
                         String mGetDb_Passwd = cursor.getString(cursor.getColumnIndex(mdbmanager.MOTIVISION_REGISTRATION_COLUMN_PASSWORD));
                         if (musername.equals(mGetDb_Username) && mpassword.equals(mGetDb_Passwd)) {
-                            Intent cir_prgrs = new Intent(MainActivity.this, Progress.class);
-                            startActivity(cir_prgrs);
+                            Intent home=new Intent(MainActivity.this, Home_Activity.class);
+                            startActivity(home);
+                            /*Intent cir_prgrs = new Intent(MainActivity.this, Progress.class);
+                            startActivity(cir_prgrs);*/
                         }
 
                     }

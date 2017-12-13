@@ -1,21 +1,30 @@
 package com.example.appsteam.motivision.circular_Progress;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Handler;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.appsteam.motivision.Home.Add_Activity;
+import com.example.appsteam.motivision.Home.Home_Activity;
+import com.example.appsteam.motivision.Home.Pofile_Activity;
 import com.example.appsteam.motivision.R;
 import com.robinhood.spark.SparkAdapter;
 import com.robinhood.spark.SparkView;
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabSelectListener;
 
 public class Progress extends AppCompatActivity {
 
     private TextView txtProgress,txtProgress1;
     private ProgressBar progressBar;
+    BottomBar bottomBar;
+    Intent i;
     private int pStatus = 0;
     private Handler handler = new Handler();
     float[] floatArray =
@@ -24,11 +33,38 @@ public class Progress extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.progress);
-
+        setContentView(R.layout.progress1);
+        bottomBar=(BottomBar)findViewById(R.id.bottombar4);
         txtProgress = (TextView) findViewById(R.id.txtProgress);
         txtProgress1 = (TextView) findViewById(R.id.txtProgress1);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        bottomBar.setDefaultTab(R.id.tab_group);
+
+        bottomBar.setOnTabSelectListener(new OnTabSelectListener()
+
+        {
+            @Override
+            public void onTabSelected(@IdRes int tabId) {
+
+                switch (tabId) {
+
+                    case R.id.tab_home:
+                        i = new Intent(Progress.this, Home_Activity.class);
+                        startActivity(i);
+                        break;
+                    case R.id.tab_add:
+                        i = new Intent(Progress.this, Add_Activity.class);
+                        startActivity(i);
+
+                    case R.id.tab_user:
+                        i=new Intent(Progress.this,Pofile_Activity.class);
+                        startActivity(i);
+
+
+
+                }
+            }
+        });
 
         new Thread(new Runnable() {
             @Override

@@ -8,4 +8,9 @@
     <color name="white">#fdfdfd</color>
     <color name="login_scrn_green">#308E1F</color>
     <color name="reg_primary_dark">#454140</color>
+    <color name="colowhite">#FFF9F9F9</color>
+    <color name="colorblack">#000000</color>
+    <color name="colorgray">#FF878484</color>
+    <color name="coloryellow">#f9f9dc04</color>
+    <color name="trans">#00000000</color>
 </resources>

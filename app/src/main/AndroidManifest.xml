@@ -5,7 +5,6 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
@@ -18,9 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".circular_Progress.Progress"
-            android:theme="@style/ProgressActivityTheme"
-            />
+        <activity
+            android:name=".circular_Progress.Progress"
+            android:theme="@style/ProgressActivityTheme" />
         <activity
             android:name=".Login.MainActivity"
             android:theme="@style/AppThemelogin" />
@@ -28,8 +27,17 @@
             android:name=".Login.Registration"
             android:theme="@style/LoginActivityTheme" />
         <activity android:name=".Login.ForgotPassword" />
-        <activity android:name=".Login.ResetPassword"
-            android:theme="@style/AppThemelogin" ></activity>
+        <activity
+            android:name=".Login.ResetPassword"
+            android:theme="@style/AppThemelogin" />
+        <activity android:name=".Home.Home_Activity"
+            android:theme="@style/ProgressActivityTheme"/>
+        <activity android:name=".Home.Add_Activity"
+            android:theme="@style/ProgressActivityTheme"/>
+        <activity android:name=".Home.Edit_Profile_Activity"
+            android:theme="@style/ProgressActivityTheme"/>
+        <activity android:name=".Home.Pofile_Activity"
+            android:theme="@style/ProgressActivityTheme"></activity>
     </application>
 
 </manifest>

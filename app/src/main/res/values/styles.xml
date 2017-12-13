@@ -44,4 +44,31 @@
     <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
 
     </style>
+    <style name="MyActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="colorPrimary">@color/colorblack</item>
+        <item name="colorPrimaryDark">@color/colorblack</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+    <style name="Hometheme" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorblack</item>
+        <item name="colorPrimaryDark">@color/colorblack</item>
+        <item name="colorAccent">@color/colowhite</item>
+    </style>
+    <style name="mycustom_layout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colowhite</item>
+    </style>
+
+    <style name="CaldroidDefaultDarkCalendarViewLayout">
+        <item name="android:background">@color/colorblack</item>
+
+    </style>
+
+    <style name="CaldroidDefaultDarkMonthName" parent="CaldroidDefaultDarkMonthName">
+        <item name="android:textColor">@color/colowhite</item>
+    </style>
+    <style name="EditText.custom" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@color/colorgray</item>
+
+    </style>
 </resources>
